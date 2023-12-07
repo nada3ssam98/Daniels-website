@@ -1,0 +1,482 @@
+:root{
+    --main-padding:80px;
+    --section-bg-color:#F7F7F7;
+}
+* ,
+*::after ,
+*::before
+{
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+a {
+    display: inline-block;
+ }
+ body{
+    font-family: 'Poppins', sans-serif;
+ }
+ 
+
+
+.max-width-500{
+    max-width: 500px;
+}
+.typed-cursor{
+    font-size: 5rem;
+    font-weight: lighter
+}
+.max-width-350{
+    max-width: 350px;
+}
+.fit-content{
+    width: fit-content;
+}
+.main-head h2{
+   
+    position: relative;
+    font-family: sans-serif;
+    z-index: 4;
+    
+}
+.main-head {
+   
+    overflow: hidden;
+    width: fit-content;
+    margin: auto;
+}
+
+ .main-head h2::after{
+      content: "";
+      width: 100%;
+      height: 36px;
+      background-image: url('../images/dots.png');
+      background-repeat: repeat;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+       
+  } 
+
+/* ====================== Start Navbar ======================*/
+
+nav .nav-link{
+    padding-inline: 20px !important;
+    position: relative;
+    font-size:14px ;
+    font-weight: 400;
+}
+
+nav .nav-link::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    top: 100%;
+    left: 20%;
+    transition: width 0.5s;
+    background-color: black;
+}
+nav .nav-link:hover::before{
+    width: 60%;
+}
+
+nav .nav-link.active::before{
+    width: 60%;
+}
+
+/* ====================== End Navbar   ======================*/
+
+
+/* ====================== Start Header ======================*/
+#home{
+    background-image:linear-gradient(to left, #0000008f,#0000008f), url('../images/bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#home .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .icons span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0,0.5);
+    margin-right: 10px;
+    
+}
+
+
+/* ====================== End   Header ======================*/
+
+
+/* ====================== Start About ======================*/
+#about{
+    padding-block: var(--main-padding);
+   
+}
+#about .about-img img{
+    width: 100%;
+}
+#about .about-caption .progress , #about .about-caption .progress-bar{
+   height: 25px;
+}
+#about .about-caption a{
+    font-size: 12px;
+    width: fit-content;
+    padding: 10px 25px;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+#about .about-caption a:hover{
+ 
+    color: white;
+    background-color: black;
+}
+#about .about-caption a.active{
+ 
+    color: white;
+    background-color: black;
+}
+#about .about-caption a.active:hover{
+ 
+    background-color: white;
+    color: black;
+}
+/* ====================== End   About ======================*/
+
+
+
+/* ====================== Start Services ===================*/
+#services{
+    padding-bottom: var(--main-padding);
+    background-color: var(--section-bg-color);
+}
+
+#services .item{
+    background-color: white;
+    border-radius: 5px;
+}
+#services .item span{
+    font-size: 25px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--section-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+#services .item span:hover{
+    color: white;
+    background-color: black;
+}
+/* ====================== End  Services ====================*/
+
+
+/* ====================== Start portfolio ======================*/
+#portfolio{
+    padding-bottom: var(--main-padding);
+}
+#portfolio figure.item img{
+    width: 100%;
+    background-image: linear-gradient(#ffffff9a , #ffffff9a);
+}
+#portfolio figure{
+   
+   position: relative;
+}
+#portfolio .item .imgLayer{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    bottom:5px ;
+    right:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column ;
+    opacity: 0;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.589);
+    transition: all 1s;
+}
+#portfolio .item:hover .imgLayer{
+    opacity: 1;
+}
+#portfolio .item .imgLayer .icons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row ;
+}
+#portfolio .item .imgLayer .icons a{
+    color: white;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 5px;
+}
+#portfolio .item .imgLayer .icons a:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    
+  
+}
+
+#portfolio .nav-pills .nav-link, .nav-pills .show>.nav-link{
+    color: black;
+    background-color: white;
+}
+#portfolio .nav-pills .nav-link.active{
+   position: relative;
+}
+#portfolio .nav-pills .nav-link.active::before{
+   position: absolute;
+   content: '';
+   top: 100%;
+   left: 8px;
+   background-color: black;
+   height: 3px;
+   width: 65%;
+}
+/* ====================== End portfolio ========================*/
+
+
+
+/* ====================== Start client ========================*/
+#client {
+    
+    background-color: var(--section-bg-color);
+
+}
+
+#client .carousel-section{ 
+    color: black;
+    margin-top: var(--main-padding);
+    text-align: center;
+}
+#client .carousel-section .carousel-item img{ 
+    width: 150px;
+    height: 150px;
+}
+#client .carousel-indicators [data-bs-target]{
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+}
+.counters{
+    margin-block: var(--main-padding);
+}
+.counters .counter-icon{
+    font-size: 30px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: black;
+}
+/* ====================== End client ========================*/
+
+
+/* ====================== Start Team ======================*/
+#team {
+   margin-block:var(--main-padding) ;
+  }  
+#team .item{
+    position: relative;
+    overflow: clip;
+  }  
+#team figure{
+    margin-bottom: 0 !important;
+  }
+#team .item .imgLayer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.788);
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    left: 5px;
+    bottom: 5px;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.5s;
+   
+}
+ #team .item:hover .imgLayer{
+    opacity: 1; 
+    transform:rotateY(360deg); 
+ 
+  }
+#team .item:hover img{
+    transform: scale(1.2);
+ 
+  }
+#team .item figure img{
+   transition: all 1s;
+   width: 100%;
+ 
+  }
+#team .item .imgLayer a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: white;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    text-decoration: none;
+  }
+
+#team .item .imgLayer a:hover{
+    color: black;
+    border: 1px solid black;
+}
+#team .item-caption{
+    background-color: gray;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius:5px ;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+
+  }
+
+/* ====================== End Team ========================*/
+
+
+/* ====================== Start Contact ====================*/
+#contact .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#contact .item span {
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: black;
+    background-color:var(--section-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-block:5px;
+  }
+
+#contact .item span:hover{
+    color: var(--section-bg-color);
+    background-color: black;
+}
+#contact form .form-inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact form input{
+    width:100% ;
+    border: none;
+    height: 40px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 300;    
+    background-color: var(--section-bg-color);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+#contact form textarea{
+    width:100% ;
+    border: none;
+    height: 150px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 300;    
+    background-color: var(--section-bg-color);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+#contact form .name-input , #contact form .email-input , #contact form .textarea-lg{
+    padding: 10px;
+}
+#contact form button{
+    font-size: 12px;
+    padding: 10px 30px;
+    background-color: black;
+    color: white;
+}
+#contact form button:hover{
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+}
+#contact .copyright{
+
+    background-color: #1C1C1C;
+    color: #6B7A7B;
+    padding: 30px;
+    margin-top: 30px;
+}
+#contact .copyright P{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0 !important;
+}
+/* ====================== End Contact ======================*/
+
+
+
+
+
+/* ====================== Start Media Query ======================*/
+/* @media screen and (min-width: 576px) {
+   
+ }
+ @media screen and (min-width: 768px) {
+ }
+ @media screen and (min-width: 992px) {
+   
+ }
+ @media screen and (min-width: 1200px) {
+    
+ }
+ @media screen and (min-width: 1400px) {
+  
+ } */
+ /* ====================== End Media Query ======================*/
