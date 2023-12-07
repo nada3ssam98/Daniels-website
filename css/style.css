@@ -60,6 +60,28 @@ a {
        
   } 
 
+       
+    
+  body:has(.home-active.active) nav{
+        background-color: transparent !important;
+        
+    }
+    
+  body:has(.home-active.active) nav{
+       
+          .navbar-brand , .nav-link {
+            color: white !important;
+          }
+        
+    }
+  body:has(.home-active.active) nav{
+       
+          .nav-link::before {
+            background-color: white !important;
+          }
+        
+    }
+
 /* ====================== Start Navbar ======================*/
 
 nav .nav-link{
